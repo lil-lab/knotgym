@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="A Minimalistic Environment for Spatial Reasoning.">
+    <meta property="og:title" content="Knot So Simple: A Minimalistic Environment for Spatial Reasoning"/>
+    <meta property="og:description" content="A Minimalistic Environment for Spatial Reasoning."/>
+    <meta property="og:url" content="https://lil-lab.github.io/knotgym/"/>
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/images/pretzel.png" />
+    <meta property="og:image:width" content="694"/>
+    <meta property="og:image:height" content="694"/>
+
+    <meta name="twitter:title" content="Knot So Simple: A Minimalistic Environment for Spatial Reasoning">
+    <meta name="twitter:description" content="A simple method to learn from human-AI interactions annotations-free.">
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta name="twitter:image" content="static/images/pretzel.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="keywords" content="artificial intelligence, visual puzzle, spatial reasoning, knot theory, reinforcement learning">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- MathJax CDN -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+
+    <title>Knot So Simple: A Minimalistic Environment for Spatial Reasoning</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="static/css/bulma.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="static/css/index.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                Knot So Simple: A Minimalistic Environment for Spatial Reasoning
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <!-- Paper authors -->
+                <span class="author-block">
+                  <a href="https://chenzizhao.github.io/" target="_blank"
+                    >Zizhao Chen</a
+                  >,
+                </span>
+                <span class="author-block">
+                  <a href="https://yoavartzi.com/" target="_blank"
+                    >Yoav Artzi</a
+                  >
+                </span>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  Cornell Tech
+                  <br />
+                  May 2025
+                  <!-- <br />Under Review</span> -->
+                <!-- <span class="eql-cntrb">
+                  <small><br /><sup>*</sup>Indicates Equal Contribution</small>
+                </span> -->
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- Arxiv PDF link -->
+                  <span class="link-block">
+                    <a
+                      href="https://arxiv.org/pdf/2505.18028"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a
+                      href="https://github.com/lil-lab/knotgym/"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+
+                  <!-- Arxiv abstract Link -->
+                  <span class="link-block">
+                    <a
+                      href="https://arxiv.org/abs/2505.18028"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded"
+                    >
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                We propose <i>KnotGym</i>, an interactive environment for complex, spatial reasoning
+                and manipulation. <i>KnotGym</i> includes goal-oriented rope manipulation tasks with
+                varying levels of complexity, all requiring acting from pure image observations.
+                Tasks are defined along a clear and quantifiable axis of complexity based on the
+                number of knot crossings, creating a natural generalization test. <i>KnotGym</i> has
+                a simple observation space, allowing for scalable development, yet it highlights
+                core challenges in integrating acute perception, spatial reasoning, and grounded
+                manipulation. We evaluate methods of different classes, including model-based
+                RL, model-predictive control, and chain-of-thought reasoning, and illustrate the
+                challenges <i>KnotGym</i> presents.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End paper abstract -->
+
+    <!--Method section -->
+    <section class="section hero">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Three Tasks</h2>
+            <div class="content has-text-justified">
+              <figure>
+                <img src="static/images/tasks.png" width="100%">
+                <figcaption>Three tasks in KnotGym: unknot is the easiest task. tie and convert are both goal-conditioned thus harder. The difficulty of each task can be tuned by the number of crossings (nx) of the initial or the goal configurations. The goal space increases drastically as nx increases.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End method section -->
+
+
+    <!--Result section -->
+    <section class="section hero">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Results</h2>
+            <div class="content has-text-justified">
+              <p>
+                We benchmarked general-purpose RL methods from different classes on <i>KnotGym</i>. The
+                results are summarized in the figures below. While RL methods can learn to solve the easiest task (unknot), they struggle to learn or generalize to new goals. In contrast, chain-of-thought reasoning methods produce valid plans yet fails to generate grounded actions. Number of crossings (nx) is a key factor in the difficulty of the tasks, and presents a ladder of generalization challenges.
+              </p>
+              <figure>
+                <img src="static/images/results.png" width="100%">
+                <figcaption>Benchmarking representative methods over nine KnotGym setups. Entries are training split success rates calculated over N rollouts. </figcaption>
+              </figure>
+              <figure>
+                <img src="static/images/generalization.png" width="100%">
+                <figcaption>
+
+                  Left: Increasing the training pool size challenges RL training (DreamV3, tie, nx=3).
+                  Right: Policies learned via RL generalizes to test configurations for task unknot regardless of the number of crossings. However, RL-tuned policies struggles to learn the goal-conditioned tasks (tie and convert), let alone generalizing to unseen configurations.
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="static/images/vlm-response.png" width="100%">
+                <figcaption>
+                  Example of VLM (gpt4) response to the Open prompt. VLMs are capable of recognizing the abstract goal and generating valid plans for the task, yet during rollouts these actions are too weak and imprecise to produce the desired effect. Including interaction history (Stateful) helps communicating the task dynamics only to a limited extent.
+                </figcaption>
+              </figure>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End result section -->
+
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@misc{chen2025knotsimpleminimalisticenvironment,
+      title={Knot So Simple: A Minimalistic Environment for Spatial Reasoning}, 
+      author={Zizhao Chen and Yoav Artzi},
+      year={2025},
+      eprint={2505.18028},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2505.18028}, 
+}</code></pre></div>
+    </section>
+    <!--End BibTex citation -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This page was built using the
+                <a
+                  href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                  target="_blank"
+                  >Academic Project Page Template
+                </a>.
+                This website is licensed under a
+                <a
+                  rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/"
+                  target="_blank"
+                  >Creative Commons Attribution-ShareAlike 4.0 International
+                  License</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

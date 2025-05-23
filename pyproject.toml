@@ -1,0 +1,53 @@
+[project]
+name = "knotgym"
+version = "0.1.0"
+description = "An knot manipulation environment for spatial reasoning"
+readme = "README.md"
+authors = [
+    { name = "Zizhao Chen", email = "ch272h@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "gymnasium>=1.1.1",
+    "mujoco>=3.3.2",
+    "numpy>=2.2.6",
+    "opencv-python>=4.11.0.86",
+    "imageio>=2.37.0",
+    "packaging>=25.0",
+    # below are for pyknotid
+    "cython>=3.1.1",
+    "appdirs>=1.4.4",
+    "networkx>=3.4.2",
+    "peewee>=3.18.1",
+    "planarity>=0.6",
+    "requests>=2.32.3",
+    "tqdm>=4.67.1",
+    "scipy>=1.11.3",
+    "sympy>=1.14.0",
+    "setuptools>=80.8.0",
+    "vispy>=0.15.2",
+]
+
+[project.optional-dependencies]
+slow = ["pyknotid>=0.5.1",]
+dev = [
+    "mediapy",
+    "ruff",
+    "isort",
+]
+
+# [project.scripts]
+# spam-cli = "spam:main_cli"  # TODO
+
+# [build-system]
+# requires = ["hatchling"]
+# build-backend = "hatchling.build"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 80
+indent-width = 2
+ignore = ["E402", "E731"]
