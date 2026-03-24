@@ -6,38 +6,31 @@ A minimalistic environment for spatial reasoning.
 
 ## Installation instructions
 
-Step 0:
-
-```sh
-uv venv && source .venv/bin/activate
-```
-
-or your favorite environment manager
-
 Step 1:
 
-<!-- ```sh
-pip install knotgym
+```sh
+git clone --recursive https://github.com/lil-lab/knotgym.git
 ```
 
-Alternatively -->
-
 ```sh
-git clone https://github.com/lil-lab/knotgym.git
-uv pip install -e knotgym
+cd knotgym/
+uv venv
+uv pip install -e .
 ```
 
 Step 2: Install `pyknotid` dependency with cython extension
 
 ```sh
-git clone https://github.com/SPOCKnots/pyknotid.git
-cd pyknotid && uv pip install -e . && python setup.py build_ext --inplace && cd ..
+cd external/pyknotid
+uv pip install -e .
+uv run python setup.py build_ext --inplace
+cd ../..
 ```
 
 To verify
 
 ```sh
-python -c "from pyknotid.spacecurves import chelpers"  # no error/warning
+uv run python -c "from pyknotid.spacecurves import chelpers"  # no error/warning
 ```
 
 We rely on these `chelpers` to compute Gauss code. The speedup is quite significant, if you plan on training with them.
@@ -45,7 +38,8 @@ We rely on these `chelpers` to compute Gauss code. The speedup is quite signific
 Step 3: Open MuJoCo visualizer
 
 ```sh
-# MacOS
+# Locating mjpython could be tricky on MacOS
+cd knotgym
 MUJOCO_GL=glfw mjpython script/mjc_interact.py
 ```
 

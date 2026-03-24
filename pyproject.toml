@@ -15,6 +15,7 @@ dependencies = [
     "imageio>=2.37.0",
     "packaging>=25.0",
     # below are for pyknotid
+    "pyknotid",
     "cython>=3.1.1",
     "appdirs>=1.4.4",
     "networkx>=3.4.2",
@@ -28,21 +29,6 @@ dependencies = [
     "vispy>=0.15.2",
 ]
 
-[project.optional-dependencies]
-slow = ["pyknotid>=0.5.1",]
-dev = [
-    "mediapy",
-    "ruff",
-    "isort",
-]
-
-# [project.scripts]
-# spam-cli = "spam:main_cli"  # TODO
-
-# [build-system]
-# requires = ["hatchling"]
-# build-backend = "hatchling.build"
-
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
@@ -51,3 +37,13 @@ build-backend = "setuptools.build_meta"
 line-length = 80
 indent-width = 2
 ignore = ["E402", "E731"]
+
+[tool.uv.sources]
+pyknotid = { path = "./external/pyknotid", editable = true }
+
+[dependency-groups]
+dev = [
+    "isort>=8.0.1",
+    "mediapy>=1.2.6",
+    "ruff>=0.15.7",
+]
